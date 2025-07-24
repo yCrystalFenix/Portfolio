@@ -15,7 +15,19 @@ const Projects = () => {
         "3M+ Robux generated",
         "Analytics-optimized gameplay"
       ],
-      link: "https://www.roblox.com/communities/5333954/R-Games#!/about"
+      link: "https://www.roblox.com/games/94371891827792/Jump-Rope-SEASON-3-SQUID-GAME"
+    },
+    {
+      title: "Find The TNT",
+      description: "Highly successful exploration and discovery game that peaked at 5k concurrent players, achieved 10M visits, and generated over 1.5M Robux. Optimized through extensive analytics and player behavior analysis.",
+      tags: ["Exploration", "Analytics-Driven", "High Engagement", "Revenue Success"],
+      features: [
+        "Peaked at 5k concurrent players",
+        "10M+ total visits",
+        "1.5M+ Robux generated",
+        "Analytics-optimized gameplay"
+      ],
+      link: null
     },
     {
       title: "Squid Game Line",
@@ -39,7 +51,7 @@ const Projects = () => {
         "Progressive skill unlocking", 
         "Competitive gameplay modes"
       ],
-      link: "https://www.roblox.com/communities/34374579/RoSpike#!/about"
+      link: "https://www.roblox.com/games/18166367987/RoSpike-Volleyball"
     },
     {
       title: "Climb A Wall",
@@ -116,15 +128,26 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3 pt-4">
-                  <Button 
-                    size="sm" 
-                    variant="outline" 
-                    className="flex-1"
-                    onClick={() => window.open(project.link, '_blank')}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    View Project
-                  </Button>
+                  {project.link ? (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1"
+                      onClick={() => window.open(project.link, '_blank')}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Project
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1 opacity-50 cursor-not-allowed"
+                      disabled
+                    >
+                      Project Unavailable (DMCA)
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

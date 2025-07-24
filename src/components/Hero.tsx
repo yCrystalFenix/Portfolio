@@ -21,7 +21,7 @@ const Hero = () => {
             Fenix
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Roblox Developer & Game Designer
+            Roblox Developer, Game Designer & Investor
           </h2>
         </div>
         
@@ -43,10 +43,10 @@ const Hero = () => {
             variant="outline" 
             size="lg" 
             className="group"
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-            Portfolio
+            Get In Touch
           </Button>
         </div>
       </div>
