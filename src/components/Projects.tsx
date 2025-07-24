@@ -6,6 +6,18 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Jump Rope",
+      description: "Highly successful competitive jump rope game that peaked at 20k concurrent players, achieved 45M visits, and generated over 3M Robux. Optimized through extensive analytics and player behavior analysis.",
+      tags: ["Competitive", "Analytics-Driven", "High CCU", "Revenue Success"],
+      features: [
+        "Peaked at 20k concurrent players",
+        "45M+ total visits",
+        "3M+ Robux generated",
+        "Analytics-optimized gameplay"
+      ],
+      link: "https://www.roblox.com/communities/5333954/R-Games#!/about"
+    },
+    {
       title: "Squid Game Line",
       description: "Advanced NPC queue system featuring 49 intelligent bots with dynamic player replacement, automatic movement patterns, and progressive challenge mechanics.",
       tags: ["Queue System", "NPC AI", "Player Management", "Challenge System"],
@@ -14,29 +26,44 @@ const Projects = () => {
         "Dynamic player replacement",
         "Auto-movement patterns",
         "Challenge progression system"
-      ]
+      ],
+      link: "https://www.roblox.com/games/70779161608323/Squid-Game-Line"
     },
     {
-      title: "Rospike",
+      title: "RoSpike",
       description: "Fast-paced volleyball-themed Roblox game focused on skill progression and competitive gameplay. Blends real volleyball mechanics with Roblox's accessible gameplay style for both casual players and sports enthusiasts.",
       tags: ["Sports Simulation", "Skill Progression", "Competitive", "Realistic Mechanics"],
       features: [
         "Real volleyball techniques",
-        "Advanced moves (float serves, jump spikes)",
+        "Advanced blocking systems",
         "Progressive skill unlocking", 
         "Competitive gameplay modes"
-      ]
+      ],
+      link: "https://www.roblox.com/communities/34374579/RoSpike#!/about"
+    },
+    {
+      title: "Climb A Wall",
+      description: "Challenging climbing game that tests player persistence and skill. Features dynamic wall generation, progressive difficulty, and competitive leaderboards.",
+      tags: ["Climbing", "Skill-Based", "Competitive", "Progressive"],
+      features: [
+        "Dynamic wall generation",
+        "Skill-based progression",
+        "Competitive leaderboards",
+        "Challenge mechanics"
+      ],
+      link: "https://www.roblox.com/games/16989186790/Climb-a-Wall"
     },
     {
       title: "Game RNG",
-      description: "Revolutionary luck-based experience where rarity is determined by real Roblox data rather than chance. Players spin for actual Roblox games, with rarity based on game age, visits, likes, and favorites.",
-      tags: ["RNG System", "Data Integration", "Platform Meta", "Collectible"],
+      description: "Revolutionary luck-based experience where rarity is determined by real Roblox data rather than chance. Players spin for actual Roblox games, with rarity based on game age, visits, likes, and favorites. (UI Design & Code Contributor)",
+      tags: ["RNG System", "Data Integration", "Platform Meta", "UI Design"],
       features: [
         "Real Roblox game catalog integration",
         "Data-driven rarity system",
-        "Platform history mechanics",
-        "Creative twist on RNG genre"
-      ]
+        "Custom UI design",
+        "Platform history mechanics"
+      ],
+      link: "https://www.roblox.com/games/17084574196/Game-RNG"
     }
   ];
 
@@ -52,7 +79,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={project.title}
@@ -89,12 +116,14 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3 pt-4">
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1"
+                    onClick={() => window.open(project.link, '_blank')}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     View Project
-                  </Button>
-                  <Button size="sm" variant="ghost">
-                    Learn More
                   </Button>
                 </div>
               </CardContent>

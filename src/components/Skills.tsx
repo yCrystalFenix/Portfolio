@@ -15,12 +15,12 @@ const Skills = () => {
     },
     {
       title: "System Architecture",
-      skills: ["OOP in Luau", "Modular Systems", "API Design", "Data Structures"],
+      skills: ["OOP in Luau", "Modular Systems", "API Design", "Data Structures", "Scalable Solutions", "Microservices", "Database Design"],
       icon: "🏗️"
     },
     {
       title: "Analytics",
-      skills: ["Data Analysis", "Player Metrics", "Performance Tracking", "Market Research"],
+      skills: ["Player Behavior Analysis", "Revenue Optimization", "Statistical Modeling", "Market Research", "A/B Testing", "Performance Metrics", "Data Visualization"],
       icon: "📊"
     },
     {
@@ -30,7 +30,7 @@ const Skills = () => {
     },
     {
       title: "Project Management",
-      skills: ["Agile Development", "Version Control", "Documentation", "Team Leadership"],
+      skills: ["Investor Relations", "Team Leadership", "Strategic Planning", "Risk Assessment", "Portfolio Management", "Version Control", "Agile Development"],
       icon: "📋"
     }
   ];
@@ -83,13 +83,15 @@ const Skills = () => {
             <div className="flex flex-wrap justify-center gap-3">
               {[
                 "Advanced Scripting",
-                "Remote Events",
                 "DataStore Management",
                 "GUI Design",
                 "Physics Systems",
                 "Networking",
                 "Security",
-                "Performance Optimization"
+                "Performance Optimization",
+                "Discord Bot Development",
+                "Minecraft Plugin Development",
+                "Web Development"
               ].map((specialization) => (
                 <Badge 
                   key={specialization}

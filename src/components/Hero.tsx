@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 text-center space-y-8 max-w-4xl mx-auto px-6">
         <div className="space-y-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            Pietro
+            Fenix
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
             Roblox Developer & Game Designer
@@ -31,11 +31,20 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.4s]">
-          <Button size="lg" className="group">
+          <Button 
+            size="lg" 
+            className="group"
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             View My Projects
             <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
           </Button>
-          <Button variant="outline" size="lg" className="group">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="group"
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
             Portfolio
           </Button>

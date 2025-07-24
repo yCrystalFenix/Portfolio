@@ -20,8 +20,13 @@ const About = () => {
     },
     {
       icon: Zap,
+      title: "Game Analyst",
+      description: "Analyzing player behavior, monetization strategies, and engagement metrics for successful game optimization"
+    },
+    {
+      icon: Zap,
       title: "Game Investor",
-      description: "Strategic investments in promising game projects with deep market analysis and technical evaluation of game potential across multiple platforms"
+      description: "Primary focus on strategic investments in promising game projects with deep market analysis, technical evaluation, and partnership with front-page developers. Extensive network of contacts with multiple investors and industry professionals."
     }
   ];
 
@@ -33,7 +38,7 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm Pietro, a passionate Roblox developer and programmer who specializes in creating 
+            I'm Fenix, a passionate Roblox developer, game analyst, and primarily a game investor who specializes in creating 
             high-concept games and intelligent systems. My approach combines viral trend analysis 
             with technically solid mechanics to deliver engaging player experiences.
           </p>
@@ -45,19 +50,19 @@ const About = () => {
               Bridging Creativity & Technology
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              As both a programmer and game investor, I understand what makes games successful 
-              from both technical and business perspectives. I create innovative Roblox games 
-              that not only entertain but also push the boundaries of what's possible on the platform.
+              As primarily a game investor and analyst, I understand what makes games successful 
+              from both technical and business perspectives. I create innovative Roblox games, 
+              Discord bots, Minecraft plugins, and websites that push boundaries across multiple platforms.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              As a game analyst, I've worked on successful titles including Find the TNT, Find the Labubus, 
-              and Jump Rope - collectively generating over 50M visits and 5M Robux in revenue. This experience 
-              gives me deep insights into player behavior, monetization strategies, and what drives long-term engagement.
+              As a game analyst, I've worked on Jump Rope (which peaked at 20k CCU, has 45M visits, and generated over 3M Robux) 
+              where I made significant improvements by analyzing player statistics and behavior patterns. I've also collaborated 
+              with multiple YouTubers totaling over 100k subscribers, including the famous SoloTheYolo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              My expertise lies in developing systems that can handle complex player interactions, 
-              economy balancing, and creating engaging progression mechanics that keep players 
-              coming back for more.
+              My primary focus is strategic game investments, leveraging my extensive network of contacts with 
+              investors and front-page developers. I specialize in project management, technical evaluation, 
+              and identifying high-potential gaming projects across various platforms.
             </p>
           </div>
 
@@ -72,13 +77,21 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">{highlight.description}</p>
               </Card>
             ))}
+            {/* Game Analyst Card */}
+            <Card 
+              className="p-6 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105"
+            >
+              <Zap className="h-8 w-8 text-primary mb-3" />
+              <h4 className="font-semibold text-foreground mb-2">{highlights[3].title}</h4>
+              <p className="text-sm text-muted-foreground">{highlights[3].description}</p>
+            </Card>
             {/* Game Investor - Larger Card */}
             <Card 
               className="p-6 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105 sm:col-span-2"
             >
               <Zap className="h-8 w-8 text-primary mb-3" />
-              <h4 className="font-semibold text-foreground mb-2">{highlights[3].title}</h4>
-              <p className="text-sm text-muted-foreground">{highlights[3].description}</p>
+              <h4 className="font-semibold text-foreground mb-2">{highlights[4].title}</h4>
+              <p className="text-sm text-muted-foreground">{highlights[4].description}</p>
             </Card>
           </div>
         </div>

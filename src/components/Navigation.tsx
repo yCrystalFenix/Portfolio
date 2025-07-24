@@ -35,9 +35,12 @@ const Navigation = () => {
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
-            Pietro
-          </div>
+          <button
+            onClick={() => window.location.href = '/'}
+            className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          >
+            Fenix
+          </button>
           
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (

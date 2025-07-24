@@ -28,14 +28,14 @@ const Contact = () => {
     {
       name: "Discord",
       icon: MessageCircle,
-      href: "#",
-      description: "Join the game development community"
+      href: "https://discord.com/users/413354553568919563",
+      description: "Contact me directly on Discord"
     },
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:hello@pietro.dev",
-      description: "Direct business inquiries"
+      href: "mailto:devfenixstudio@gmail.com",
+      description: "Get in touch via email"
     }
   ];
 
@@ -116,6 +116,7 @@ const Contact = () => {
                 <Card 
                   key={link.name}
                   className="p-4 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105 group cursor-pointer"
+                  onClick={() => window.open(link.href, '_blank')}
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
