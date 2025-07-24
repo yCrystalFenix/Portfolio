@@ -17,47 +17,25 @@ const Projects = () => {
       ]
     },
     {
-      title: "Become a Volleyball Player to Prove Mom Wrong",
-      description: "Skill-based trend game incorporating real volleyball fundamentals with emotional progression and motivational storytelling elements.",
-      tags: ["Skill-Based", "Sports Simulation", "Emotional Story", "Progression"],
+      title: "Rospike",
+      description: "Fast-paced volleyball-themed Roblox game focused on skill progression and competitive gameplay. Blends real volleyball mechanics with Roblox's accessible gameplay style for both casual players and sports enthusiasts.",
+      tags: ["Sports Simulation", "Skill Progression", "Competitive", "Realistic Mechanics"],
       features: [
-        "Real volleyball mechanics",
-        "Skill development system",
-        "Emotional progression",
-        "Motivational storytelling"
+        "Real volleyball techniques",
+        "Advanced moves (float serves, jump spikes)",
+        "Progressive skill unlocking", 
+        "Competitive gameplay modes"
       ]
     },
     {
-      title: "Steal a Brainrot",
-      description: "Character collector game based on humor and internet memes, featuring a sophisticated tiered rarity system and per-second economy mechanics.",
-      tags: ["Character Collector", "Meme Culture", "Economy System", "Rarity Tiers"],
+      title: "Game RNG",
+      description: "Revolutionary luck-based experience where rarity is determined by real Roblox data rather than chance. Players spin for actual Roblox games, with rarity based on game age, visits, likes, and favorites.",
+      tags: ["RNG System", "Data Integration", "Platform Meta", "Collectible"],
       features: [
-        "Meme-based characters",
-        "Tiered rarity system",
-        "Per-second economy",
-        "Humor-driven gameplay"
-      ]
-    },
-    {
-      title: "Gym Tycoon System",
-      description: "Comprehensive economy system with exaggerated item pricing and exponential gain scaling, designed for idle tycoon-style gameplay mechanics.",
-      tags: ["Tycoon", "Economy", "Idle Game", "Scaling System"],
-      features: [
-        "Exaggerated pricing model",
-        "Exponential gain scaling",
-        "Idle gameplay mechanics",
-        "Investment strategies"
-      ]
-    },
-    {
-      title: "LineUtils",
-      description: "Sophisticated Roblox module that automates queue behavior using both NPC bots and real players, providing seamless integration for any game.",
-      tags: ["Module", "Automation", "Queue Management", "API"],
-      features: [
-        "Bot and player integration",
-        "Automated queue behavior",
-        "Modular architecture",
-        "Easy implementation"
+        "Real Roblox game catalog integration",
+        "Data-driven rarity system",
+        "Platform history mechanics",
+        "Creative twist on RNG genre"
       ]
     }
   ];
@@ -74,7 +52,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={project.title}
