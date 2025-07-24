@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, ExternalLink } from "lucide-react";
+import { ArrowDown, ExternalLink } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
@@ -36,8 +36,8 @@ const Hero = () => {
             <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
           </Button>
           <Button variant="outline" size="lg" className="group">
-            <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-            GitHub
+            <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+            Portfolio
           </Button>
         </div>
       </div>

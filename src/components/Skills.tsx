@@ -5,12 +5,12 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Lua/Luau", "JavaScript", "TypeScript", "Python"],
+      skills: ["Lua/Luau", "JavaScript", "Java", "TypeScript", "Python"],
       icon: "💻"
     },
     {
       title: "Game Development",
-      skills: ["Roblox Studio", "Game Design", "Level Design", "Player Experience"],
+      skills: ["Roblox Studio", "Game Design", "UI Design", "Player Experience"],
       icon: "🎮"
     },
     {
@@ -19,9 +19,9 @@ const Skills = () => {
       icon: "🏗️"
     },
     {
-      title: "Game Economy",
-      skills: ["Economy Balancing", "Monetization", "Player Retention", "Analytics"],
-      icon: "💰"
+      title: "Analytics",
+      skills: ["Data Analysis", "Player Metrics", "Performance Tracking", "Market Research"],
+      icon: "📊"
     },
     {
       title: "Performance",

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -94,7 +94,7 @@ const Projects = () => {
                     View Project
                   </Button>
                   <Button size="sm" variant="ghost">
-                    <Github className="h-4 w-4" />
+                    Learn More
                   </Button>
                 </div>
               </CardContent>

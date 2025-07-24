@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: Zap,
       title: "Game Investor",
-      description: "Strategic investments in promising game projects"
+      description: "Strategic investments in promising game projects with deep market analysis and technical evaluation of game potential across multiple platforms"
     }
   ];
 
@@ -57,7 +57,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {highlights.map((highlight, index) => (
+            {highlights.slice(0, 3).map((highlight, index) => (
               <Card 
                 key={highlight.title}
                 className="p-6 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105"
@@ -67,6 +67,14 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">{highlight.description}</p>
               </Card>
             ))}
+            {/* Game Investor - Larger Card */}
+            <Card 
+              className="p-6 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105 sm:col-span-2"
+            >
+              <Zap className="h-8 w-8 text-primary mb-3" />
+              <h4 className="font-semibold text-foreground mb-2">{highlights[3].title}</h4>
+              <p className="text-sm text-muted-foreground">{highlights[3].description}</p>
+            </Card>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Github, Twitter, Mail, MessageCircle } from "lucide-react";
+import { MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -25,18 +25,6 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    {
-      name: "GitHub",
-      icon: Github,
-      href: "#",
-      description: "Check out my open source projects"
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      href: "#",
-      description: "Follow for development updates"
-    },
     {
       name: "Discord",
       icon: MessageCircle,
