@@ -50,6 +50,11 @@ const About = () => {
               that not only entertain but also push the boundaries of what's possible on the platform.
             </p>
             <p className="text-muted-foreground leading-relaxed">
+              As a game analyst, I've worked on successful titles including Find the TNT, Find the Labubus, 
+              and Jump Rope - collectively generating over 50M visits and 5M Robux in revenue. This experience 
+              gives me deep insights into player behavior, monetization strategies, and what drives long-term engagement.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
               My expertise lies in developing systems that can handle complex player interactions, 
               economy balancing, and creating engaging progression mechanics that keep players 
               coming back for more.
