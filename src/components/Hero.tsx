@@ -10,10 +10,10 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background/80" />
-      
+
       {/* Content */}
       <div className="relative z-10 text-center space-y-8 max-w-4xl mx-auto px-6">
         <div className="space-y-4 animate-fade-in">
@@ -24,12 +24,12 @@ const Hero = () => {
             Roblox Developer, Game Designer & Investor
           </h2>
         </div>
-        
+
         <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s]">
           Creating innovative games that blend viral trends with technically solid mechanics. 
           Specializing in intelligent systems and high-concept Roblox experiences.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.4s]">
           <Button 
             size="lg" 
@@ -50,8 +50,8 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      
-      {/* Floating Elements */}
+
+      {/* Floating Blobs */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-glow" />
       <div className="absolute bottom-32 right-16 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-glow [animation-delay:1s]" />
     </section>
