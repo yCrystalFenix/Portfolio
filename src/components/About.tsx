@@ -38,9 +38,10 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm Fenix, a passionate Roblox developer, game analyst, and primarily a game investor who specializes in creating 
-            high-concept games and intelligent systems. My approach combines viral trend analysis 
-            with technically solid mechanics to deliver engaging player experiences.
+            I'm Fenix, primarily a <span className="text-primary font-semibold">game investor</span> and analyst who also develops 
+            innovative Roblox games and intelligent systems. I specialize in strategic investments, 
+            technical evaluation, and identifying high-potential gaming projects with a focus on 
+            viral trend analysis and solid game mechanics.
           </p>
         </div>
 

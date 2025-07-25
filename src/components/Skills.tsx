@@ -24,9 +24,9 @@ const Skills = () => {
       icon: "📊"
     },
     {
-      title: "Performance",
-      skills: ["Script Optimization", "Server-side Logic", "Memory Management", "Load Balancing"],
-      icon: "⚡"
+      title: "Investment & Strategy",
+      skills: ["Game Investment Analysis", "Technical Due Diligence", "Project Evaluation", "Risk Assessment", "Portfolio Management", "Market Analysis", "Partnership Development"],
+      icon: "💰"
     },
     {
       title: "Project Management",
@@ -75,33 +75,54 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <Card className="p-8 bg-gradient-card border-border/50 inline-block">
-            <h3 className="text-xl font-semibold text-foreground mb-4">
-              Specialized in Roblox Development
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "Advanced Scripting",
-                "DataStore Management",
-                "GUI Design",
-                "Physics Systems",
-                "Networking",
-                "Security",
-                "Performance Optimization",
-                "Discord Bot Development",
-                "Minecraft Plugin Development",
-                "Web Development"
-              ].map((specialization) => (
-                <Badge 
-                  key={specialization}
-                  className="bg-primary text-primary-foreground hover:shadow-glow transition-all"
-                >
-                  {specialization}
-                </Badge>
-              ))}
-            </div>
-          </Card>
+        <div className="mt-16 space-y-8">
+          <div className="text-center">
+            <Card className="p-8 bg-gradient-card border-border/50 inline-block">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Specialized in Roblox Development
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  "Advanced Scripting",
+                  "DataStore Management",
+                  "GUI Design",
+                  "Physics Systems",
+                  "Networking",
+                  "Security",
+                  "Performance Optimization"
+                ].map((specialization) => (
+                  <Badge 
+                    key={specialization}
+                    className="bg-primary text-primary-foreground hover:shadow-glow transition-all"
+                  >
+                    {specialization}
+                  </Badge>
+                ))}
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Card className="p-8 bg-gradient-card border-border/50 inline-block">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Additional Development Expertise
+              </h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[
+                  "Discord Bot Development",
+                  "Minecraft Plugin Development", 
+                  "Web Development"
+                ].map((specialization) => (
+                  <Badge 
+                    key={specialization}
+                    className="bg-secondary text-secondary-foreground hover:shadow-glow transition-all"
+                  >
+                    {specialization}
+                  </Badge>
+                ))}
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
