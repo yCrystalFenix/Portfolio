@@ -58,7 +58,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed">
               As a game analyst, I've worked on Jump Rope (which peaked at 20k CCU, has 45M visits, and generated over 3M Robux) 
               where I made significant improvements by analyzing player statistics and behavior patterns. I've also collaborated 
-              with multiple YouTubers totaling over 100k subscribers, including the famous SoloTheYolo.
+              with multiple YouTubers totaling over 100k subscribers, including SoloTheYolo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               My primary focus is strategic game investments, leveraging my extensive network of contacts with 
