@@ -34,8 +34,8 @@ const Contact = () => {
     {
       name: "Email",
       icon: Mail,
-      href: "#",
-      description: "devfenixstudio@gmail.com"
+      href: "mailto:devfenixstudio@gmail.com",
+      description: "Get in touch via email"
     }
   ];
 
@@ -116,7 +116,7 @@ const Contact = () => {
                 <Card 
                   key={link.name}
                   className="p-4 bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 hover:scale-105 group cursor-pointer"
-                  onClick={() => link.name === "Email" ? navigator.clipboard.writeText("devfenixstudio@gmail.com").then(() => toast({ title: "Email copied!", description: "devfenixstudio@gmail.com copied to clipboard" })) : window.open(link.href, '_blank')}
+                  onClick={() => window.open(link.href, '_blank')}
                 >
                   <div className="flex items-center gap-4">
                     <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">

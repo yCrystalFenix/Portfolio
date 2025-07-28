@@ -38,10 +38,9 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm Fenix, primarily a <span className="text-primary font-semibold">game investor</span> and analyst who also develops 
-            innovative Roblox games and intelligent systems. I specialize in strategic investments, 
-            technical evaluation, and identifying high-potential gaming projects with a focus on 
-            viral trend analysis and solid game mechanics.
+            I'm Fenix, a passionate Roblox developer, game analyst, and primarily a game investor who specializes in creating 
+            high-concept games and intelligent systems. My approach combines viral trend analysis 
+            with technically solid mechanics to deliver engaging player experiences.
           </p>
         </div>
 
@@ -58,7 +57,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed">
               As a game analyst, I've worked on Jump Rope (which peaked at 20k CCU, has 45M visits, and generated over 3M Robux) 
               where I made significant improvements by analyzing player statistics and behavior patterns. I've also collaborated 
-              with multiple YouTubers totaling over 100k subscribers, including SoloTheYolo.
+              with multiple YouTubers totaling over 100k subscribers, including the famous SoloTheYolo.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               My primary focus is strategic game investments, leveraging my extensive network of contacts with 
