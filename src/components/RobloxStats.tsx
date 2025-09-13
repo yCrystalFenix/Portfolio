@@ -8,7 +8,7 @@ import { robloxApi, RobloxGameConfig, RobloxGameStats, RobloxStatsTotal } from "
 
 // Add your games here - easily modular!
 const GAMES_CONFIG: RobloxGameConfig[] = [
-  { name: "Jump Rope", placeId: 94371891827792 },
+  { name: "Jump Rope", placeId: 7815946137 },
   { name: "Squid Game Line", placeId: 70779161608323 },
   { name: "RoSpike", placeId: 18166367987 },
   { name: "Climb A Wall", placeId: 16989186790 },
