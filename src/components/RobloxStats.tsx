@@ -16,6 +16,7 @@ const GAMES_CONFIG: RobloxGameConfig[] = [
 ];
 
 const RobloxStats = () => {
+  console.log('RobloxStats component rendering');
   const [gamesData, setGamesData] = useState<(RobloxGameStats | null)[]>([]);
   const [totals, setTotals] = useState<RobloxStatsTotal | null>(null);
   const [loading, setLoading] = useState(false);
@@ -32,9 +33,12 @@ const RobloxStats = () => {
   };
 
   const fetchStats = async () => {
+    console.log('fetchStats called');
     setLoading(true);
     try {
+      console.log('Calling robloxApi.getMultipleGamesData with config:', GAMES_CONFIG);
       const result = await robloxApi.getMultipleGamesData(GAMES_CONFIG);
+      console.log('API result:', result);
       setGamesData(result.gamesData);
       setTotals(result.totals);
       setLastUpdated(new Date());
@@ -55,6 +59,7 @@ const RobloxStats = () => {
   };
 
   useEffect(() => {
+    console.log('useEffect running, calling fetchStats');
     fetchStats();
   }, []);
 
@@ -83,6 +88,10 @@ const RobloxStats = () => {
                 Last updated: {lastUpdated.toLocaleTimeString()}
               </p>
             )}
+          </div>
+          {/* Debug info */}
+          <div className="mt-4 text-sm text-muted-foreground">
+            Component loaded • {GAMES_CONFIG.length} games configured
           </div>
         </div>
 
