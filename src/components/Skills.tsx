@@ -78,7 +78,7 @@ const Skills = () => {
         <div className="mt-16 text-center">
           <Card className="p-8 bg-gradient-card border-border/50 inline-block">
             <h3 className="text-xl font-semibold text-foreground mb-4">
-              Specialized in Roblox Development
+              Specialized in Development
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
