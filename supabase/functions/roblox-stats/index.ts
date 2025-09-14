@@ -20,9 +20,6 @@ interface RobloxGameStats {
   likeRatio: number;
 }
 
-// Replace with your Open Cloud API key
-const OPEN_CLOUD_API_KEY = 'YOUR_OPEN_CLOUD_API_KEY';
-
 async function getUniverseId(placeId: number): Promise<number> {
   const url = `https://apis.roblox.com/universes/v1/places/${placeId}/universe`;
   const response = await fetch(url);
