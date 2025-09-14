@@ -183,12 +183,17 @@ class RobloxApiService {
       const validGames = gamesData.filter(game => game !== null) as RobloxGameStats[];
       
       // Calculate totals
+      const averageLikeRatio = validGames.length > 0 
+        ? validGames.reduce((sum, game) => sum + game.likeRatio, 0) / validGames.length 
+        : 0;
+
       const totals: RobloxStatsTotal = {
         totalVisits: validGames.reduce((sum, game) => sum + game.visits, 0),
         totalFavorites: validGames.reduce((sum, game) => sum + game.favorites, 0),
         totalPlaying: validGames.reduce((sum, game) => sum + game.playing, 0),
         totalUpVotes: validGames.reduce((sum, game) => sum + game.upVotes, 0),
         totalGames: validGames.length,
+        averageLikeRatio,
       };
       
       console.log('Final results:', { gamesData, totals });

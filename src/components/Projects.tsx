@@ -30,6 +30,30 @@ const Projects = () => {
       link: null
     },
     {
+      title: "Find The Monster",
+      description: "Thrilling hide-and-seek adventure game where players search for hidden monsters across diverse environments. Features dynamic spawning systems and competitive leaderboards.",
+      tags: ["Adventure", "Hide & Seek", "Exploration", "Competitive"],
+      features: [
+        "Dynamic monster spawning",
+        "Multiple search environments",
+        "Competitive leaderboards",
+        "Progressive difficulty system"
+      ],
+      link: "https://www.roblox.com/games/111323207426362/Find-The-Monster"
+    },
+    {
+      title: "Find The Greenbeans",
+      description: "Unique discovery game focused on finding hidden greenbean collectibles. Combines exploration mechanics with collection challenges and achievement systems.",
+      tags: ["Collection", "Exploration", "Achievement System", "Hidden Objects"],
+      features: [
+        "Hidden collectible system",
+        "Achievement unlocks",
+        "Exploration mechanics",
+        "Progress tracking"
+      ],
+      link: "https://www.roblox.com/games/123903298413050/Find-The-Greenbeans"
+    },
+    {
       title: "Squid Game Line",
       description: "Advanced NPC queue system featuring 49 intelligent bots with dynamic player replacement, automatic movement patterns, and progressive challenge mechanics.",
       tags: ["Queue System", "NPC AI", "Player Management", "Challenge System"],
