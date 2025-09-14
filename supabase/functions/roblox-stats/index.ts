@@ -67,7 +67,6 @@ async function getVotes(universeId: number): Promise<any> {
     return data.data[0];
 }
 
-
 async function getGameData(placeId: number): Promise<RobloxGameStats> {
   try {
     const universeId = await getUniverseId(placeId);
@@ -80,7 +79,6 @@ async function getGameData(placeId: number): Promise<RobloxGameStats> {
     const downVotes = votes.downVotes || 0;
     const total = upVotes + downVotes;
     const likeRatio = total > 0 ? (upVotes / total) * 100 : 0;
-
 
     return {
       name: stats.name,
