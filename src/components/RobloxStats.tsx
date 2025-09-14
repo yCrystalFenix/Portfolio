@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { RefreshCw, Users, Heart, Eye, Trophy, TrendingUp } from "lucide-react";
+import { RefreshCw, Users, Heart, Eye, Trophy, TrendingUp, AlertCircle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { robloxApi, RobloxGameConfig, RobloxGameStats, RobloxStatsTotal } from "@/services/robloxApi";
 
@@ -20,6 +20,7 @@ const RobloxStats = () => {
   const [gamesData, setGamesData] = useState<(RobloxGameStats | null)[]>([]);
   const [totals, setTotals] = useState<RobloxStatsTotal | null>(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const { toast } = useToast();
 
@@ -35,23 +36,30 @@ const RobloxStats = () => {
   const fetchStats = async () => {
     console.log('fetchStats called');
     setLoading(true);
+    setError(null);
+    
     try {
       console.log('Calling robloxApi.getMultipleGamesData with config:', GAMES_CONFIG);
       const result = await robloxApi.getMultipleGamesData(GAMES_CONFIG);
       console.log('API result:', result);
+      
       setGamesData(result.gamesData);
       setTotals(result.totals);
       setLastUpdated(new Date());
+      
       toast({
         title: "Stats Updated",
         description: `Successfully loaded data for ${result.totals.totalGames} games`,
       });
     } catch (error) {
       console.error('Error fetching Roblox stats:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      setError(errorMessage);
+      
       toast({
         variant: "destructive",
         title: "Failed to Load Stats",
-        description: "Unable to fetch Roblox game data. Please try again later.",
+        description: errorMessage,
       });
     } finally {
       setLoading(false);
@@ -73,6 +81,14 @@ const RobloxStats = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
             Real-time statistics from my Roblox games powered by the official Roblox API.
           </p>
+          
+          {error && (
+            <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg flex items-center justify-center gap-2 text-destructive">
+              <AlertCircle className="h-5 w-5" />
+              <span className="text-sm">{error}</span>
+            </div>
+          )}
+          
           <div className="flex items-center justify-center gap-4">
             <Button 
               onClick={fetchStats} 
@@ -89,9 +105,11 @@ const RobloxStats = () => {
               </p>
             )}
           </div>
+          
           {/* Debug info */}
           <div className="mt-4 text-sm text-muted-foreground">
             Component loaded • {GAMES_CONFIG.length} games configured
+            {gamesData.length > 0 && ` • ${gamesData.filter(g => g !== null).length} games loaded`}
           </div>
         </div>
 
@@ -121,7 +139,7 @@ const RobloxStats = () => {
             <Card className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
               <CardContent className="p-4 text-center">
                 <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-                <p className="text-2xl font-bold text-foreground">{totals.averageLikeRatio}%</p>
+                <p className="text-2xl font-bold text-foreground">{Math.round(totals.averageLikeRatio * 100) / 100}%</p>
                 <p className="text-sm text-muted-foreground">Avg Like Ratio</p>
               </CardContent>
             </Card>
@@ -143,7 +161,7 @@ const RobloxStats = () => {
                     {gameData && <Trophy className="h-5 w-5 text-accent" />}
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    {gameData ? 'Live Stats' : loading ? 'Loading...' : 'Failed to load'}
+                    {gameData ? 'Live Stats' : loading ? 'Loading...' : error ? 'Failed to load' : 'No data'}
                   </CardDescription>
                 </CardHeader>
                 
@@ -177,10 +195,15 @@ const RobloxStats = () => {
                         </Badge>
                       </div>
                     </>
-                  ) : (
+                  ) : loading ? (
                     <div className="text-center py-8">
                       <div className="h-6 bg-muted/30 rounded animate-pulse mb-2"></div>
                       <div className="h-4 bg-muted/20 rounded animate-pulse w-3/4 mx-auto"></div>
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 text-muted-foreground">
+                      <AlertCircle className="h-8 w-8 mx-auto mb-2" />
+                      <p className="text-sm">Unable to load game data</p>
                     </div>
                   )}
                 </CardContent>
