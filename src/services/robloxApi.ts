@@ -100,20 +100,28 @@ class RobloxApiService {
       const response = await fetch(url);
       
       if (!response.ok) {
-        throw new Error(`Error fetching votes: ${response.status} ${response.statusText}`);
+        console.warn(`Failed to fetch votes for universe ${universeId}: ${response.status} ${response.statusText}`);
+        return { upVotes: 0, downVotes: 0 };
       }
       
       const proxyData = await response.json();
       const data = JSON.parse(proxyData.contents);
       
+      // Handle Roblox API errors (like rate limiting)
+      if (data.errors && data.errors.length > 0) {
+        console.warn(`Roblox API error for votes ${universeId}:`, data.errors[0].message);
+        return { upVotes: 0, downVotes: 0 };
+      }
+      
       if (!data.data || data.data.length === 0) {
-        throw new Error('No vote data found for that universe ID');
+        console.warn(`No vote data found for universe ${universeId}`);
+        return { upVotes: 0, downVotes: 0 };
       }
       
       return data.data[0];
     } catch (error) {
-      console.error(`Failed to get votes for universe ${universeId}:`, error);
-      throw error;
+      console.warn(`Failed to get votes for universe ${universeId}:`, error);
+      return { upVotes: 0, downVotes: 0 };
     }
   }
 
@@ -166,18 +174,10 @@ class RobloxApiService {
     try {
       console.log('Starting to fetch data for all games:', games);
       
-      // Add delays between requests to avoid rate limiting
-      const gamesData: (RobloxGameStats | null)[] = [];
-      
-      for (let i = 0; i < games.length; i++) {
-        const gameData = await this.getGameData(games[i]);
-        gamesData.push(gameData);
-        
-        // Add delay between requests (except for the last one)
-        if (i < games.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
-        }
-      }
+      // Fetch all games concurrently for faster loading
+      const gamesData = await Promise.all(
+        games.map(game => this.getGameData(game))
+      );
       
       // Filter out null values for totals calculation
       const validGames = gamesData.filter(game => game !== null) as RobloxGameStats[];
