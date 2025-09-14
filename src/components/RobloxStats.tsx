@@ -3,14 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RefreshCw, Users, Heart, Eye, Trophy, TrendingUp, AlertCircle } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { robloxApi, RobloxGameConfig, RobloxGameStats, RobloxStatsTotal } from "@/services/robloxApi";
 
 // Add your games here - easily modular!
 const GAMES_CONFIG: RobloxGameConfig[] = [
   { name: "Jump Rope", placeId: 7815946137 },
-  { name: "Find the Monster", placeId: 111323207426362 },
-  { name: "Climb A Wall", placeId: 16989186790 },
+  { name: "Find The Monster", placeId: 111323207426362 },
+  { name: "Find The Greenbeans", placeId: 123903298413050 },
 ];
 
 const RobloxStats = () => {
@@ -129,16 +129,16 @@ const RobloxStats = () => {
             </Card>
             <Card className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
               <CardContent className="p-4 text-center">
-                <Heart className="h-8 w-8 text-destructive mx-auto mb-2" />
-                <p className="text-2xl font-bold text-foreground">{formatNumber(totals.totalUpVotes)}</p>
-                <p className="text-sm text-muted-foreground">Total Likes</p>
+                <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
+                <p className="text-2xl font-bold text-foreground">{formatNumber(totals.totalFavorites)}</p>
+                <p className="text-sm text-muted-foreground">Total Favorites</p>
               </CardContent>
             </Card>
             <Card className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
               <CardContent className="p-4 text-center">
-                <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-                <p className="text-2xl font-bold text-foreground">{Math.round(totals.averageLikeRatio * 100) / 100}%</p>
-                <p className="text-sm text-muted-foreground">Avg Like Ratio</p>
+                <Heart className="h-8 w-8 text-destructive mx-auto mb-2" />
+                <p className="text-2xl font-bold text-foreground">{formatNumber(totals.totalUpVotes)}</p>
+                <p className="text-sm text-muted-foreground">Total Likes</p>
               </CardContent>
             </Card>
           </div>
