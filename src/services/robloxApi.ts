@@ -189,9 +189,6 @@ class RobloxApiService {
         totalPlaying: validGames.reduce((sum, game) => sum + game.playing, 0),
         totalUpVotes: validGames.reduce((sum, game) => sum + game.upVotes, 0),
         totalGames: validGames.length,
-        averageLikeRatio: validGames.length > 0
-          ? validGames.reduce((sum, game) => sum + game.likeRatio, 0) / validGames.length
-          : 0,
       };
       
       console.log('Final results:', { gamesData, totals });
