@@ -30,13 +30,13 @@ const Projects = () => {
       link: null
     },
     {
-      title: "Find The Labubus",
+      title: "Find The Monster",
       description: "Thrilling hide-and-seek adventure game where players search for hidden labubus across multiple diverse maps. Features dynamic spawning systems and competitive gameplay.",
       tags: ["Adventure", "Hide & Seek", "Multiple Maps", "Competitive"],
       features: [
         "Hidden labubus across maps",
         "Multiple diverse environments",
-        "Competitive gameplay",
+        "Extreme Game Retention",
         "Map-based exploration"
       ],
       link: "https://www.roblox.com/games/111323207426362/Find-The-Monster"
@@ -48,7 +48,7 @@ const Projects = () => {
       features: [
         "Hidden greenbeans across maps",
         "Multiple map environments",
-        "Exploration mechanics",
+        "Extreme Game Retention",
         "Map-based progression"
       ],
       link: "https://www.roblox.com/games/123903298413050/Find-The-Greenbeans"
