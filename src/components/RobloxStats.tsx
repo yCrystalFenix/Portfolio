@@ -10,7 +10,7 @@ import { robloxApi, RobloxGameConfig, RobloxGameStats, RobloxStatsTotal } from "
 const GAMES_CONFIG: RobloxGameConfig[] = [
   { name: "Jump Rope", placeId: 94371891827792 },
   { name: "Find the Monster", placeId: 111323207426362 },
-  { name: "Climb A Wall", placeId: 16989186790 },
+  { name: "Find The Greenbeans", placeId: 123903298413050 },
 ];
 
 const RobloxStats = () => {
