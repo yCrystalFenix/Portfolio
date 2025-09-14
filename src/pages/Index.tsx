@@ -12,8 +12,8 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <Projects />
       <RobloxStats />
+      <Projects />
       <Skills />
       <Contact />
     </div>
