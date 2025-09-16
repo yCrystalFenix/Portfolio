@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Mail } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const socialLinks = [
@@ -8,12 +8,6 @@ const Contact = () => {
       icon: MessageCircle,
       href: "https://discord.com/users/413354553568919563",
       description: "Contact me directly on Discord"
-    },
-    {
-      name: "Email",
-      icon: Mail,
-      href: "mailto:devfenixstudio@gmail.com",
-      description: "Get in touch via email"
     }
   ];
 
