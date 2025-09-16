@@ -17,8 +17,7 @@ const Navigation = () => {
     { label: "About", href: "#about" },
     { label: "Live Stats", href: "#roblox-stats" },
     { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
-    { label: "Contact", href: "#contact" }
+    { label: "Skills", href: "#skills" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -58,7 +57,7 @@ const Navigation = () => {
           <Button 
             variant="outline" 
             size="sm"
-            onClick={() => scrollToSection('#contact')}
+            onClick={() => window.open('https://discord.com/users/413354553568919563', '_blank')}
           >
             Get In Touch
           </Button>

@@ -4,7 +4,6 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import RobloxStats from "@/components/RobloxStats";
 import Skills from "@/components/Skills";
-import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
       <RobloxStats />
       <Projects />
       <Skills />
-      <Contact />
     </div>
   );
 };
