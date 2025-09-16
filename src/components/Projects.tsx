@@ -54,30 +54,6 @@ const Projects = () => {
       link: "https://www.roblox.com/games/123903298413050/Find-The-Greenbeans"
     },
     {
-      title: "Squid Game Line",
-      description: "Advanced NPC queue system featuring 49 intelligent bots with dynamic player replacement, automatic movement patterns, and progressive challenge mechanics.",
-      tags: ["Queue System", "NPC AI", "Player Management", "Challenge System"],
-      features: [
-        "49 intelligent NPC bots",
-        "Dynamic player replacement",
-        "Auto-movement patterns",
-        "Challenge progression system"
-      ],
-      link: "https://www.roblox.com/games/70779161608323/Squid-Game-Line"
-    },
-    {
-      title: "RoSpike",
-      description: "Fast-paced volleyball-themed Roblox game focused on skill progression and competitive gameplay. Blends real volleyball mechanics with Roblox's accessible gameplay style for both casual players and sports enthusiasts.",
-      tags: ["Sports Simulation", "Skill Progression", "Competitive", "Realistic Mechanics"],
-      features: [
-        "Real volleyball techniques",
-        "Advanced blocking systems",
-        "Progressive skill unlocking", 
-        "Competitive gameplay modes"
-      ],
-      link: "https://www.roblox.com/games/18166367987/RoSpike-Volleyball"
-    },
-    {
       title: "Climb A Wall",
       description: "Challenging climbing game that tests player persistence and skill. Features dynamic wall generation, progressive difficulty, and competitive leaderboards.",
       tags: ["Climbing", "Skill-Based", "Competitive", "Progressive"],
@@ -100,6 +76,30 @@ const Projects = () => {
         "Platform history mechanics"
       ],
       link: "https://www.roblox.com/games/17084574196/Game-RNG"
+    },
+    {
+      title: "Squid Game Line",
+      description: "Advanced NPC queue system featuring 49 intelligent bots with dynamic player replacement, automatic movement patterns, and progressive challenge mechanics.",
+      tags: ["Queue System", "NPC AI", "Player Management", "Challenge System"],
+      features: [
+        "49 intelligent NPC bots",
+        "Dynamic player replacement",
+        "Auto-movement patterns",
+        "Challenge progression system"
+      ],
+      link: "https://www.roblox.com/games/70779161608323/Squid-Game-Line"
+    },
+    {
+      title: "RoSpike",
+      description: "Fast-paced volleyball-themed Roblox game focused on skill progression and competitive gameplay. Blends real volleyball mechanics with Roblox's accessible gameplay style for both casual players and sports enthusiasts.",
+      tags: ["Sports Simulation", "Skill Progression", "Competitive", "Realistic Mechanics"],
+      features: [
+        "Real volleyball techniques",
+        "Advanced blocking systems",
+        "Progressive skill unlocking", 
+        "Competitive gameplay modes"
+      ],
+      link: "https://www.roblox.com/games/18166367987/RoSpike-Volleyball"
     }
   ];
 
