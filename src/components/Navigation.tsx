@@ -34,20 +34,20 @@ const Navigation = () => {
         : 'bg-transparent border-b-4 border-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full">
           <button
             onClick={() => window.location.href = '/'}
-            className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="font-bold text-xl bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity z-10"
           >
             Fenix
           </button>
           
-          <div className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden md:flex items-center space-x-6 flex-1 justify-center">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors relative z-10"
               >
                 {item.label}
               </button>
@@ -58,6 +58,7 @@ const Navigation = () => {
             variant="outline" 
             size="sm"
             onClick={() => window.open('https://discord.com/users/413354553568919563', '_blank')}
+            className="z-10"
           >
             Get In Touch
           </Button>
