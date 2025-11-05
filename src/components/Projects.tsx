@@ -18,6 +18,18 @@ const Projects = () => {
       link: "https://www.roblox.com/games/94371891827792/Jump-Rope-SEASON-3-SQUID-GAME"
     },
     {
+      title: "Bubble Wrap Tower",
+      description: "Founder and owner of the game which is a huge success that peaked at 1k concurrent users playing. Stats were massively optimized and improved by over 200% in a week. Had 4 Stats on the 90th percentile.",
+      tags: ["Competitive", "Analytics-Driven", "High CCU", "Revenue Success"],
+      features: [
+        "Peaked at 1k concurrent players",
+        "2.5M+ total visits",
+        "Day 1, 7 and 30 retention rate on the 95th percentile",
+        "Analytics going through the roof"
+      ],
+      link: "https://www.roblox.com/games/111392584461873/Bubble-Wrap-Tower"
+    },
+    {
       title: "Find The TNT",
       description: "Highly successful exploration and discovery game that peaked at 5k concurrent players, achieved 10M visits, and generated over 1.5M Robux. Optimized through extensive analytics and player behavior analysis.",
       tags: ["Exploration", "Analytics-Driven", "High Engagement", "Revenue Success"],
