@@ -78,18 +78,6 @@ const Projects = () => {
       link: "https://www.roblox.com/games/16989186790/Climb-a-Wall"
     },
     {
-      title: "Game RNG",
-      description: "Revolutionary luck-based experience where rarity is determined by real Roblox data rather than chance. Players spin for actual Roblox games, with rarity based on game age, visits, likes, and favorites. (UI Design & Code Contributor)",
-      tags: ["RNG System", "Data Integration", "Platform Meta", "UI Design"],
-      features: [
-        "Real Roblox game catalog integration",
-        "Data-driven rarity system",
-        "Custom UI design",
-        "Platform history mechanics"
-      ],
-      link: "https://www.roblox.com/games/17084574196/Game-RNG"
-    },
-    {
       title: "Squid Game Line",
       description: "Advanced NPC queue system featuring 49 intelligent bots with dynamic player replacement, automatic movement patterns, and progressive challenge mechanics.",
       tags: ["Queue System", "NPC AI", "Player Management", "Challenge System"],
